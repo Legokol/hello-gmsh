@@ -4,7 +4,7 @@
 int main(int argc, char **argv) {
     gmsh::initialize();
 
-    gmsh::model::add("t2");
+    gmsh::model::add("t0");
 
     double lc = 1e-2;
 
@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
 
     gmsh::model::mesh::generate(3);
 
-    //gmsh::write("t2.msh");
+    //gmsh::write("t0.msh");
 
     std::set<std::string> args(argv, argv + argc);
     if (!args.count("-nopopup")) gmsh::fltk::run();
